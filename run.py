@@ -2,7 +2,7 @@ import sys
 from .scr.core import *
 from .scr.read import *
 
-sys.path.append('/home/maruachi/Research_project/3_Dimer_models/interpolation')
+sys.path.append('')
 
 if len(sys.argv) == 1:
 	print("head tail1 tail2 N tag")
