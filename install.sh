@@ -1,3 +1,3 @@
 #!/bin/sh
 
-export PYTHONPATH=$PYTHONPATH:
+export PYTHONPATH=$PYTHONPATH:/home/maruachi/temp

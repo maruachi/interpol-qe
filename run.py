@@ -2,7 +2,7 @@ import sys
 from .scr.core import *
 from .scr.read import *
 
-sys.path.append('')
+sys.path.append('/home/maruachi/temp/interpolation')
 
 if len(sys.argv) == 1:
 	print("head tail1 tail2 N tag")
