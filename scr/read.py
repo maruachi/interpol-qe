@@ -28,7 +28,7 @@ class read:
 					for _ in range(self.nat):
 						line = f.readline()
 						tmp = re.findall("[+-]?[0-9]+\.[0-9]+", line)
-						atoms.append([float(x) for x in tmp])
+						atoms.append([isOnBoundary(float(x)) for x in tmp])
 		return atoms
 
 	def read_spes(self, filename):
@@ -44,6 +44,15 @@ class read:
 	
 	def getValues(self):
 		return self.nat, self.head, self.spes, np.array(self.atoms1), np.array(self.atoms2)
+
+def isOnBoundary(x):
+	tol = 0.001
+	if abs(x) < tol:
+		return 0.
+	elif abs(1 - x) < tol:
+		return 0.
+	else:
+		return x
 	
 def printAtoms(p):
 	for x in p:
